@@ -28,7 +28,7 @@ typedef struct s_node {
 typedef struct s_linked_list
 {
     //! @brief A pointer to the first node of the list
-    //! @info if first equals NULL, the list is considered as empty
+    //! @note if first equals NULL, the list is considered as empty
     struct s_node *first;
 } llist_t;
 
@@ -76,12 +76,12 @@ bool ll_sort_desc(llist_t *list, int (*cmp)(void *data1, void *data2));
 //-- ARRAY CONVERSION --//
 
 //! @brief Creates an array from values in list.
-//! @info The values are not duplicated
+//! @note The values are not duplicated
 //! @return A pointer to a 2D array, or NULL on error
 void **ll_to_array(llist_t *list);
 
 //! @brief Creates linked list from array.
-//! @info The values are not duplicated
+//! @note The values are not duplicated
 //! @return A pointer to a list's head, or NULL on error
 llist_t *ll_from_array(void **data);
 
@@ -125,7 +125,7 @@ bool ll_remove_node(llist_t *list, node_t *node);
 bool ll_remove_node_at_index(llist_t *list, int index);
 
 //! @brief Returns true if the node containing data was successfully removed
-//! @warn The comparison of datas is based on the data-field value
+//! @warning The comparison of datas is based on the data-field value
 //! @return false if an error occurs, or true in success
 bool ll_remove_node_by_data(llist_t *list, void *data);
 
@@ -169,11 +169,11 @@ llist_t *ll_one_node(void *data);
 //-- DESTROYING FUNCTION --//
 
 //! @brief Returns true if list was successfully destroyed
-//! @warn the head is freed
+//! @warning the head is freed
 bool ll_free_list(llist_t *list);
 
 //! @brief Returns true if list and related data was successfully destroyed
-//! @warn the head is freed
+//! @warning the head is freed
 bool ll_free_list_and_data(llist_t *list);
 
 //! @brief Free a node (the data structure), but not the hold data
