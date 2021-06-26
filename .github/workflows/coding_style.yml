@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2.3.4
       - name: Execute Norminette
         id: checkCS
-        run: make coding_style > coding_style_report.txt
+        run: norminette -i4 -A -c > coding_style_report.txt
       - name: Upload Coding Style report
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
