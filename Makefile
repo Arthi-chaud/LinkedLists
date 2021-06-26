@@ -44,7 +44,7 @@ TESTS_FILES	=	tests/test_add_list.c 				\
 				tests/test_sort.c					\
 				tests/test_to_array.c				\
 
-CFLAGS 	= 	-Wall -Werror -Wshadow -Wextra -I./../../include/
+CFLAGS 	= 	-Wall -Werror -Wshadow -Wextra -I./include/
 
 CC		=	gcc
 
@@ -55,37 +55,35 @@ NAME	=	liblinked_list.a
 all		:	$(NAME)
 
 $(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
-		mv $(NAME) ../
+		@ ar rc $(NAME) $(OBJ)
 
 clean	:
-			rm -f $(OBJ)
+			@ rm -f $(OBJ)
 
 clean_tests:
-			rm -f unit_tests
-			rm -f *.gcno
-			rm -f *.gcda
+			@ rm -f unit_tests
+			@ rm -f *.gcno
+			@ rm -f *.gcda
 
 fclean	:	clean clean_tests
-			rm -f ../$(NAME)
-			rm -f *.gcda
-			rm -f *.gcno
-			rm -f unit_tests
+			@ rm -f $(NAME)
+			@ rm -f *.gcda
+			@ rm -f *.gcno
+			@ rm -f unit_tests
 
 
 
 tests_compile: CFLAGS += --coverage
 tests_compile: LDFLAGS += -lcriterion
-tests_compile: lib_compile
+tests_compile: clean_tests
 			@ $(CC) -o unit_tests $(SRC) $(TESTS_FILES) $(CFLAGS) $(LDFLAGS)
-			@ rm -f test_*.gc*
 
 tests_run:	tests_compile
 			@ ./unit_tests
 			@ $(MAKE) coverage
 
-coverage:	
-			@ gcovr --exclude lib/
+coverage:
+			@ gcovr --exclude tests/
 
 re		:	fclean all
 
