@@ -39,21 +39,3 @@ bool ll_insert_node(llist_t *list, node_t *node, int index)
     return true;
 }
 
-bool ll_insert_data(llist_t *list, void *data, int index)
-{
-    node_t *node = ll_create_node(data);
-
-    if (!node)
-        return false;
-    return ll_insert_node(list, node, index);
-}
-
-bool ll_append_node(llist_t *list, node_t *node)
-{
-    return ll_insert_node(list, node, LL_ERROR);
-}
-
-bool ll_append_data(llist_t *list, void *data)
-{
-    return ll_insert_data(list, data, LL_ERROR);
-}

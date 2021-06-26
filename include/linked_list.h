@@ -43,6 +43,10 @@ bool ll_insert_data(llist_t *list, void *data, int index);
 //! @return false if an error occurs, or true in success
 bool ll_append_data(llist_t *list, void *data);
 
+//! @brief Creates a node containing data, and inserting node at the front of the list
+//! @return false if an error occurs, or true in success
+bool ll_push_front_data(llist_t *list, void *data);
+
 //! @brief Inserts node at index in list
 //! @return false if an error occurs, or true in success
 bool ll_insert_node(llist_t *list, node_t *node, int index);
@@ -51,6 +55,10 @@ bool ll_insert_node(llist_t *list, node_t *node, int index);
 //! @return false if an error occurs, or true in success
 bool ll_append_node(llist_t *list, node_t *node);
 
+//! @brief Inserts node at the front of the list
+//! @return false if an error occurs, or true in success
+bool ll_push_front_node(llist_t *list, node_t *node);
+
 //! @brief Inserts src_list in dest_list at index
 //! @return false if an error occurs, or true in success
 bool ll_insert_list(llist_t *dest_list, llist_t *src_list, int index);
@@ -58,6 +66,10 @@ bool ll_insert_list(llist_t *dest_list, llist_t *src_list, int index);
 //! @brief Append src_list to the end dest_list
 //! @return false if an error occurs, or true in success
 bool ll_append_list(llist_t *dest_list, llist_t *src_list);
+
+//! @brief Inserts src_list at the front of dest_list
+//! @return false if an error occurs, or true in success
+bool ll_push_front_list(llist_t *dest_list, llist_t *src_list);
 
 
 
@@ -125,9 +137,9 @@ bool ll_remove_node(llist_t *list, node_t *node);
 bool ll_remove_node_at_index(llist_t *list, int index);
 
 //! @brief Returns true if the node containing data was successfully removed
-//! @warning The comparison of datas is based on the data-field value
 //! @return false if an error occurs, or true in success
-bool ll_remove_node_by_data(llist_t *list, void *data);
+//! @param cmp a function, which returns true if the data are equal 
+bool ll_remove_node_by_data(llist_t *list, void *data, bool (*cmp)(void *, void *));
 
 //! @brief Returns true list was reversed successfully.
 //! @return false if an error occurs, or true in success

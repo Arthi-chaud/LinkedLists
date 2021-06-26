@@ -50,8 +50,3 @@ bool ll_insert_list(llist_t *dest_list, llist_t *src_list, int index)
         dest_list->first = src_list->first;
     return true;
 }
-
-bool ll_append_list(llist_t *dest_list, llist_t *src_list)
-{
-    return ll_insert_list(dest_list, src_list, LL_ERROR);
-}

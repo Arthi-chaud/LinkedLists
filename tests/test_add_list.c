@@ -90,7 +90,7 @@ Test(ll_insert_list, add_middle_2_test, .init = cr_redirect_stdout)
     llist_t *lista = ll_create_list();
     llist_t *listb = ll_create_list();
 
-    ll_insert_node(lista, nodea1, LL_ERROR);
+    ll_push_front_node(lista, nodea1);
     ll_insert_node(lista, nodea2, LL_ERROR);
     ll_insert_node(lista, nodea3, LL_ERROR);
     ll_insert_node(listb, nodeb1, LL_ERROR);
@@ -104,24 +104,38 @@ Test(ll_insert_list, add_middle_2_test, .init = cr_redirect_stdout)
 
 Test(ll_insert_list, add_begining_test, .init = cr_redirect_stdout)
 {
-    node_t *nodea1 = ll_create_node((void *)"4");
-    node_t *nodea2 = ll_create_node((void *)"5");
-    node_t *nodea3 = ll_create_node((void *)"6");
-    node_t *nodeb1 = ll_create_node((void *)"1");
-    node_t *nodeb2 = ll_create_node((void *)"2");
-    node_t *nodeb3 = ll_create_node((void *)"3");
     llist_t *lista = ll_create_list();
     llist_t *listb = ll_create_list();
 
-    ll_insert_node(lista, nodea1, LL_ERROR);
-    ll_insert_node(lista, nodea2, LL_ERROR);
-    ll_insert_node(lista, nodea3, LL_ERROR);
-    ll_insert_node(listb, nodeb1, LL_ERROR);
-    ll_insert_node(listb, nodeb2, LL_ERROR);
-    ll_insert_node(listb, nodeb3, LL_ERROR);
-    cr_assert_eq(ll_insert_list(lista, listb, 0), true);
+    ll_push_front_data(lista, "4");
+    ll_insert_data(lista, "5", LL_ERROR);
+    ll_insert_data(lista, "6", LL_ERROR);
+    ll_push_front_data(listb, "1");
+    ll_insert_data(listb, "2", LL_ERROR);
+    ll_append_data(listb, "3");
+    cr_assert_eq(ll_push_front_list(lista, listb), true);
     cr_assert_eq(ll_get_len(lista), 6);
     cr_assert_eq(lista->first, listb->first);
     ll_print_data(lista, &print_function);
     cr_assert_stdout_eq_str("1\n2\n3\n4\n5\n6\n");
+}
+
+Test(ll_insert_list, add_to_empty_list, .init = cr_redirect_stdout)
+{
+    llist_t *lista = ll_create_list();
+    llist_t *listb = ll_create_list();
+
+    ll_push_front_data(listb, "1");
+    ll_insert_data(listb, "2", LL_ERROR);
+    ll_append_data(listb, "3");
+    cr_assert_eq(ll_push_front_list(lista, listb), true);
+    cr_assert_eq(ll_get_len(lista), 3);
+    cr_assert_eq(lista->first, listb->first);
+    ll_print_data(lista, &print_function);
+    cr_assert_stdout_eq_str("1\n2\n3\n");
+}
+
+Test(ll_insert_list, test_error)
+{
+    cr_assert_eq(ll_insert_list(NULL, NULL, 1), false);
 }

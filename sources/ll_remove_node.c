@@ -35,14 +35,14 @@ bool ll_remove_node_at_index(llist_t *list, int index)
     return false;
 }
 
-bool ll_remove_node_by_data(llist_t *list, void *data)
+bool ll_remove_node_by_data(llist_t *list, void *data, bool (*cmp)(void *, void *))
 {
     node_t *node = NULL;
     size_t list_size = ll_get_len(list);
 
     for (size_t i = 0; i < list_size; i++) {
         node = ll_get_node_by_index(list, i);
-        if (data == node->data) {
+        if (cmp(data, node->data)) {
             ll_remove_node(list, node);
             return true;
         }
