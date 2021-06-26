@@ -1,6 +1,12 @@
 # LINKED LISTS
 
-LINKED LISTS is a C library which lets you manage your data in linked-lists-type containers/vectors
+__C library which lets you manage your data in linked-lists-type containers__
+
+[![Build](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml)
+[![Coding style](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml)
+[![Unit Tests](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml)
+
+___
 
 With this library, you don't have to worry about manually allocating (or freeing) memory. Everything can be done using the given set of functions.
 
