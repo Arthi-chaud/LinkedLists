@@ -26,6 +26,8 @@ It lets you do the following operations:
 
   - At the end of the list (append)
 
+  - At the front of the list (push_front)
+
   - Through a pre-made node, or not
 
 - **Display** a list's content
