@@ -1,6 +1,6 @@
 # LINKED LISTS
 
-__C library which lets you manage your data in linked-lists-type containers__
+## C library which lets you manage your data in linked-lists-type containers
 
 [![Build](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml)
 [![Coding style](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml)
