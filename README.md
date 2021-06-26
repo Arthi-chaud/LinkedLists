@@ -1,6 +1,6 @@
-# Victor
+# LINKED LISTS
 
-Victor is a C library which lets you using your data in linked-lists-type containers/vectors
+LINKED LISTS is a C library which lets you manage your data in linked-lists-type containers/vectors
 
 With this library, you don't have to worry about manually allocating (or freeing) memory. Everything can be done using the given set of functions.
 

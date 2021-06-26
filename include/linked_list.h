@@ -21,7 +21,7 @@ typedef struct s_node {
     void *data;
     //! @brief A pointer to the next node
     struct s_node *next;
-}node_t;
+} node_t;
 
 //! @brief Data structure representing a linked-list's head
 
@@ -30,7 +30,7 @@ typedef struct s_linked_list
     //! @brief A pointer to the first node of the list
     //! @info if first equals NULL, the list is considered as empty
     struct s_node *first;
-}llist_t;
+} llist_t;
 
 
 //-- INSERT FUNCTIONS --//
