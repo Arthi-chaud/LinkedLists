@@ -5,7 +5,6 @@
 [![Build](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml)
 [![Coding style](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml)
 [![Unit Tests](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml)
-[![Documentation](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/documentation.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/documentation.yml)
 
 ___
 
