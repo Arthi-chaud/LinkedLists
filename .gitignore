@@ -1,0 +1,7 @@
+*.o
+*.a
+unit_tests
+*gc*
+.vscode*
+vgcore*
+*.pdf

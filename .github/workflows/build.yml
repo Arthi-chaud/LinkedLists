@@ -1,0 +1,27 @@
+name: Build
+on: [push, pull_request]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    container: arthichaud/ci_docker_image:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Build project
+        run: make
+      - name: Clean Workspace
+        run: make fclean
+      - name: Build Again
+        run: make re
+  BinaryNameCheck:
+    needs: Build
+    runs-on: ubuntu-latest
+    container: arthichaud/ci_docker_image:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Compile
+        run: make
+      - name: Check Linked list lib binary name 
+        run: test -f liblinked_list.a

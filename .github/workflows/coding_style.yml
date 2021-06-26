@@ -1,0 +1,18 @@
+name: Coding style
+on: [push, pull_request]
+
+jobs:
+  CodingStyleCheck:
+    runs-on: ubuntu-latest
+    container: arthichaud/ci_docker_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Execute Norminette
+        id: checkCS
+        run: make coding_style > coding_style_report.txt
+      - name: Upload Coding Style report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: coding_style_report
+          path: ./coding_style_report.txt
