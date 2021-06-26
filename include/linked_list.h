@@ -43,7 +43,7 @@ bool ll_insert_data(llist_t *list, void *data, int index);
 //! @return false if an error occurs, or true in success
 bool ll_append_data(llist_t *list, void *data);
 
-//! @brief Creates a node containing data, and inserting node at the front of the list
+//! @brief Creates a node containing data, and insert node at front of the list
 //! @return false if an error occurs, or true in success
 bool ll_push_front_data(llist_t *list, void *data);
 
@@ -139,7 +139,8 @@ bool ll_remove_node_at_index(llist_t *list, int index);
 //! @brief Returns true if the node containing data was successfully removed
 //! @return false if an error occurs, or true in success
 //! @param cmp a function, which returns true if the data are equal 
-bool ll_remove_node_by_data(llist_t *list, void *data, bool (*cmp)(void *, void *));
+bool ll_remove_node_by_data(llist_t *list, void *data,
+bool (*cmp)(void *, void *));
 
 //! @brief Returns true list was reversed successfully.
 //! @return false if an error occurs, or true in success

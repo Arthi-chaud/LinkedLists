@@ -35,7 +35,8 @@ bool ll_remove_node_at_index(llist_t *list, int index)
     return false;
 }
 
-bool ll_remove_node_by_data(llist_t *list, void *data, bool (*cmp)(void *, void *))
+bool ll_remove_node_by_data(llist_t *list, void *data,
+bool (*cmp)(void *, void *))
 {
     node_t *node = NULL;
     size_t list_size = ll_get_len(list);
