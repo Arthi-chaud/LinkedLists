@@ -13,9 +13,13 @@
 
 #define LL_ERROR (-1)
 
+//! @brief Data structure representing a linked-list's node
 typedef struct s_node {
+    //! @brief A pointer to the previous node
     struct s_node *prev;
+    //! @brief The data-holding field
     void *data;
+    //! @brief A pointer to the next node
     struct s_node *next;
 }node_t;
 
@@ -28,21 +32,27 @@ typedef struct s_linked_list
 //-- INSERT FUNCTIONS --//
 
 //! @brief Creates a node containing data, and inserting node at index in list
+//! @return false if an error occurs, or true in success
 bool ll_insert_data(llist_t *list, void *data, int index);
 
 //! @brief Creates a node containing data, and inserting node at end in list
+//! @return false if an error occurs, or true in success
 bool ll_append_data(llist_t *list, void *data);
 
 //! @brief Inserts node at index in list
+//! @return false if an error occurs, or true in success
 bool ll_insert_node(llist_t *list, node_t *node, int index);
 
 //! @brief Inserts node at end in list
+//! @return false if an error occurs, or true in success
 bool ll_append_node(llist_t *list, node_t *node);
 
 //! @brief Inserts src_list in dest_list at index
+//! @return false if an error occurs, or true in success
 bool ll_insert_list(llist_t *dest_list, llist_t *src_list, int index);
 
-//! @brief Add src_list at end of dest_list
+//! @brief Append src_list to the end dest_list
+//! @return false if an error occurs, or true in success
 bool ll_append_list(llist_t *dest_list, llist_t *src_list);
 
 
@@ -50,9 +60,11 @@ bool ll_append_list(llist_t *dest_list, llist_t *src_list);
 //-- SORTING FUNCTIONS --//
 
 //! @brief Sorts list in ascendant order, using cmp as value comparator
+//! @return false if an error occurs, or true in success
 bool ll_sort_asc(llist_t *list, int (*cmp)(void *data1, void *data2));
 
 //! @brief Sorts list in descendant order, using cmp as value comparator
+//! @return false if an error occurs, or true in success
 bool ll_sort_desc(llist_t *list, int (*cmp)(void *data1, void *data2));
 
 
@@ -61,10 +73,12 @@ bool ll_sort_desc(llist_t *list, int (*cmp)(void *data1, void *data2));
 
 //! @brief Creates an array from values in list.
 //! @info The values are not duplicated
+//! @return A pointer to a 2D array, or NULL on error
 void **ll_to_array(llist_t *list);
 
 //! @brief Creates linked list from array.
 //! @info The values are not duplicated
+//! @return A pointer to a list's head, or NULL on error
 llist_t *ll_from_array(void **data);
 
 
@@ -72,21 +86,22 @@ llist_t *ll_from_array(void **data);
 //-- PROPERTIES --//
 
 //! @brief Returns length of list.
-//! @return If an error occurs, LL_ERROR is returned
+//! @return If an error occurs (invalid list, for example), LL_ERROR is returned
 size_t ll_get_len(llist_t *list);
 
 //! @brief Returns true if list is empty (first == NULL).
-//! @return If an error occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_is_empty(llist_t *list);
 
 //! @brief Returns true if list contains node.
-//! @return If an error occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_has_node(llist_t *list, node_t *node);
 
 //! @brief Check if a list is correctly formed
 bool ll_is_correct(llist_t *list);
 
 //! @brief Display data from each node of list using print_function
+//! @return false if an error occurs, or true in success
 bool ll_print_data(llist_t *list, int (*print_function)(void *data));
 
 
@@ -94,24 +109,24 @@ bool ll_print_data(llist_t *list, int (*print_function)(void *data));
 //-- INSERTION FUNCTIONS --//
 
 //! @brief Returns true if node was moved successfully at index.
-//! @return If an errors occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_move_node(llist_t *list, node_t *node, int index);
 
 //! @brief Returns true if node was removed successfullyfrom list.
-//! @return If an errors occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_remove_node(llist_t *list, node_t *node);
 
 //! @brief Returns true if node at index removed successfullyfrom list.
-//! @return If an errors occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_remove_node_at_index(llist_t *list, int index);
 
 //! @brief Returns true if the node containing data was successfully removed
-//! @brief Returns false if data not in list.
-//! @brief Only working for pointers
+//! @warn The comparison of datas is based on the data-field value
+//! @return false if an error occurs, or true in success
 bool ll_remove_node_by_data(llist_t *list, void *data);
 
 //! @brief Returns true list was reversed successfully.
-//! @return If an errors occurs, false is returned
+//! @return false if an error occurs, or true in success
 bool ll_revert(llist_t *list);
 
 
@@ -134,31 +149,35 @@ size_t ll_get_node_index(llist_t *list, node_t *node);
 
 //-- CREATION FUNCTION --//
 
-//! @brief Creates a node, with data. Prev/Next fields are set tot NULL
+//! @brief Creates a node, with data. Prev/Next fields are set to NULL
+//! @return A pointer to a node, or NULL if an error occurs.
 node_t *ll_create_node(void *data);
 
-//! @brief Creates empty list. 'first' firled is set tot NULL
+//! @brief Creates empty list.'first' field is set to NULL
+//! @return A pointer to an "empty" list, or NULL if an error occurs.
 llist_t *ll_create_list(void);
 
 //! @brief Creates list with one node, containing data.
+//! @return A pointer to a list, or NULL if an error occurs.
 llist_t *ll_one_node(void *data);
-
 
 
 //-- DESTROYING FUNCTION --//
 
 //! @brief Returns true if list was successfully destroyed
-//! @info the head is freed
+//! @warn the head is freed
 bool ll_free_list(llist_t *list);
 
 //! @brief Returns true if list and related data was successfully destroyed
-//! @info the head is freed
+//! @warn the head is freed
 bool ll_free_list_and_data(llist_t *list);
 
-//! @brief Returns true if node was successfully destroyed
+//! @brief Free a node (the data structure), but not the hold data
+//! @return false if an error occurs, or true in success
 bool ll_free_node(node_t **node);
 
-//! @brief Returns true if node and data was successfully destroyed
+//! @brief Free a node (the data structure), AND the hold data
+//! @return false if an error occurs, or true in success
 bool ll_free_node_and_data(node_t **node);
 
 #endif /* !LINKED_LIST_H_ */
