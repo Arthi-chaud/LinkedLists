@@ -1,4 +1,4 @@
-name: Sonar CLoud Analysis
+name: Sonar Cloud Analysis
 on: [push, pull_request]
 
 jobs:
