@@ -17,10 +17,11 @@ jobs:
         run: |
           git config --global user.email "${GITHUB_ACTOR}@github.com";
           git config --global user.name "${GITHUB_ACTOR}";
+          git init;
           git add -A;
           git commit -m "Deploy / Update the documentation";
           git remote add origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@${GITHUB_REPO};
-          git checkout -b doc
+          git checkout -b doc;
           git push --force origin doc;
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

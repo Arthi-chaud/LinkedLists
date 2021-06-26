@@ -5,6 +5,7 @@
 [![Build](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/build.yml)
 [![Coding style](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/coding_style.yml)
 [![Unit Tests](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/unit_tests.yml)
+[![Documentation](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/documentation.yml/badge.svg)](https://github.com/Arthi-chaud/LinkedLists/actions/workflows/documentation.yml)
 
 ___
 
@@ -36,7 +37,8 @@ It lets you do the following operations:
 
   - The list, its nodes, and the data
 
-____
+Go to [full documentation](https://arthi-chaud.github.io/LinkedLists/)
+___
 
 ## Why using this library
 
