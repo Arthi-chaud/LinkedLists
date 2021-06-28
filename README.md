@@ -52,6 +52,11 @@ To be more precise, this library was developped while my first and second year a
 This library can also serve as a **source of inspiration** for any _EPITECH_ or _42_ student who would like to **code their own C containers**.
 
 ____
+### Shout out
+
+Thanks to [Octopus](https://github.com/Octopus773): his [lily library](https://github.com/Octopus773/lily) which greatly inspired the conception of this library
+
+____
 
 ### Warning
 
