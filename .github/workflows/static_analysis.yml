@@ -10,6 +10,7 @@ jobs:
   sonarCloud:
     name: Build
     runs-on: ubuntu-latest
+    container: arthichaud/ci_docker_image:latest
     env:
       SONAR_SCANNER_VERSION: 4.4.0.2170
       SONAR_SERVER_URL: "https://sonarcloud.io"
