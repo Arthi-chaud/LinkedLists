@@ -199,9 +199,9 @@ bool ll_free_node_and_data(node_t **node);
 
 //-- High-level & Functional programming-inspired --//
 
-//! @brief Call f on each node of the list
+//! @brief Call f on each node of the list. f return the modified data
 //! @return a boolean, false on error
-bool ll_map(llist_t *list, bool (*f) (void *data, int index, llist_t *list));
+bool ll_map(llist_t *list, void *(*f) (void *data, int index, llist_t *list));
 
 //! @brief Filters nodes and return a new list.
 //! The new list contains node on which the filter function returned true

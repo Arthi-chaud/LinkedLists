@@ -40,6 +40,7 @@ TESTS_FILES	=	tests/test_add_list.c 				\
 				tests/test_index.c					\
 				tests/test_integrity.c				\
 				tests/test_len.c					\
+				tests/test_map.c					\
 				tests/test_move_node.c				\
 				tests/test_one_node.c				\
 				tests/test_print_data.c				\
