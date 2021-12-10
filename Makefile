@@ -11,6 +11,7 @@ SRC		=	sources/ll_insert/ll_append.c		\
 			sources/ll_insert/ll_insert_node.c	\
 			sources/ll_insert/ll_push_front.c	\
 			sources/ll_create_node.c			\
+			sources/ll_filter.c					\
 			sources/ll_free_list.c				\
 			sources/ll_create_list.c			\
 			sources/ll_free_node.c				\
