@@ -189,12 +189,31 @@ bool ll_free_list(llist_t *list);
 //! @warning the head is freed
 bool ll_free_list_and_data(llist_t *list);
 
-//! @brief Free a node (the data structure), but not the hold data
+//! @brief Free a node (the data structure), but not the held data
 //! @return false if an error occurs, or true in success
 bool ll_free_node(node_t **node);
 
-//! @brief Free a node (the data structure), AND the hold data
+//! @brief Free a node (the data structure), AND the held data
 //! @return false if an error occurs, or true in success
 bool ll_free_node_and_data(node_t **node);
+
+//-- High-level & Functional programming-inspired --//
+
+//! @brief Call f on each node of the list
+//! @return a boolean, false on error
+bool ll_map(llist_t *list, bool (*f) (void *data, int index, llist_t *list));
+
+//! @brief Filters nodes and return a new list.
+//! The new list contains node on which the filter function returned true
+//! @warning the held data is no deep-copied
+//! @return a newly formed list, null on error
+llist_t *ll_filter(llist_t *list, bool (*filter) (void *data));
+
+//! @brief takes init and the list's first item and applies f to it,
+//! then feeds the function with this result and the second argument and so on
+bool ll_foldl(llist_t *list, void *init, void *(*f)(void *value, void *data));
+//! @brief it takes init and list's last item and applies f to it,
+//! then it takes the penultimate item from the end and the result, and so on
+bool ll_foldr(llist_t *list, void *init, void *(*f)(void *value, void *data));
 
 #endif /* !LINKED_LIST_H_ */
