@@ -33,6 +33,7 @@ SRC		=	sources/ll_insert/ll_append.c		\
 TESTS_FILES	=	tests/test_add_list.c 				\
 				tests/test_add_node.c 				\
 				tests/test_create_node.c			\
+				tests/test_filter.c					\
 				tests/test_free_list.c				\
 				tests/test_free_node.c				\
 				tests/test_free_node_and_data.c		\

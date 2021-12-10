@@ -16,6 +16,7 @@ llist_t *ll_filter(llist_t *list, bool (*filter) (void *data))
 	for (size_t i = 0; i < len; i++) {
 		if (filter(currrent_node->data))
 			ll_append_data(filtered, currrent_node->data);
+		currrent_node = currrent_node->next;
 	}
 	return filtered;
 }
