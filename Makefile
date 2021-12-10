@@ -19,6 +19,7 @@ SRC		=	sources/ll_insert/ll_append.c		\
 			sources/ll_has_node.c				\
 			sources/ll_integrity.c				\
 			sources/ll_is_empty.c				\
+			sources/ll_map.c					\
 			sources/ll_move_node.c				\
 			sources/ll_node_index.c				\
 			sources/ll_one_node.c				\
