@@ -12,6 +12,7 @@ SRC		=	sources/ll_insert/ll_append.c		\
 			sources/ll_insert/ll_push_front.c	\
 			sources/ll_create_node.c			\
 			sources/ll_filter.c					\
+			sources/ll_fold.c					\
 			sources/ll_free_list.c				\
 			sources/ll_create_list.c			\
 			sources/ll_free_node.c				\
@@ -34,6 +35,7 @@ TESTS_FILES	=	tests/test_add_list.c 				\
 				tests/test_add_node.c 				\
 				tests/test_create_node.c			\
 				tests/test_filter.c					\
+				tests/test_fold.c					\
 				tests/test_free_list.c				\
 				tests/test_free_node.c				\
 				tests/test_free_node_and_data.c		\

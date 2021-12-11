@@ -211,9 +211,9 @@ llist_t *ll_filter(llist_t *list, bool (*filter) (void *data));
 
 //! @brief takes init and the list's first item and applies f to it,
 //! then feeds the function with this result and the second argument and so on
-bool ll_foldl(llist_t *list, void *init, void *(*f)(void *value, void *data));
+void *ll_foldl(llist_t *list, void *init, void *(*f)(void *value, void *data));
 //! @brief it takes init and list's last item and applies f to it,
 //! then it takes the penultimate item from the end and the result, and so on
-bool ll_foldr(llist_t *list, void *init, void *(*f)(void *value, void *data));
+void *ll_foldr(llist_t *list, void *init, void *(*f)(void *value, void *data));
 
 #endif /* !LINKED_LIST_H_ */
