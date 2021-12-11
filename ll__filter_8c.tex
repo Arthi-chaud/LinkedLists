@@ -1,0 +1,27 @@
+\hypertarget{ll__filter_8c}{}\section{sources/ll\+\_\+filter.c File Reference}
+\label{ll__filter_8c}\index{sources/ll\+\_\+filter.\+c@{sources/ll\+\_\+filter.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$ \hyperlink{ll__filter_8c_ad28a93db2eaa6af55ff80ab17605cb98}{ll\+\_\+filter} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, bool($\ast$filter)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Filters nodes and return a new list. The new list contains node on which the filter function returned true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__filter_8c_ad28a93db2eaa6af55ff80ab17605cb98}\label{ll__filter_8c_ad28a93db2eaa6af55ff80ab17605cb98}} 
+\index{ll\+\_\+filter.\+c@{ll\+\_\+filter.\+c}!ll\+\_\+filter@{ll\+\_\+filter}}
+\index{ll\+\_\+filter@{ll\+\_\+filter}!ll\+\_\+filter.\+c@{ll\+\_\+filter.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+filter()}{ll\_filter()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}$\ast$ ll\+\_\+filter (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{bool($\ast$)(void $\ast$data)}]{filter }\end{DoxyParamCaption})}
+
+
+
+Filters nodes and return a new list. The new list contains node on which the filter function returned true. 
+
+\begin{DoxyWarning}{Warning}
+the held data is no deep-\/copied 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+a newly formed list, null on error 
+\end{DoxyReturn}

@@ -1,0 +1,621 @@
+\hypertarget{linked__list_8h}{}\section{include/linked\+\_\+list.h File Reference}
+\label{linked__list_8h}\index{include/linked\+\_\+list.\+h@{include/linked\+\_\+list.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__node}{s\+\_\+node}
+\begin{DoxyCompactList}\small\item\em Data structure representing a linked-\/list\textquotesingle{}s node. \end{DoxyCompactList}\item 
+struct \hyperlink{structs__linked__list}{s\+\_\+linked\+\_\+list}
+\begin{DoxyCompactList}\small\item\em Data structure representing a linked-\/list\textquotesingle{}s head. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{linked__list_8h_afdd503c7602488094b1ece8885d59c8d}{L\+L\+\_\+\+E\+R\+R\+OR}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__node}{s\+\_\+node} \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Data structure representing a linked-\/list\textquotesingle{}s node. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structs__linked__list}{s\+\_\+linked\+\_\+list} \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Data structure representing a linked-\/list\textquotesingle{}s head. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{linked__list_8h_a3678815cc7cd8d8f4c187d545e0f1e25}{ll\+\_\+insert\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data, int index)
+\begin{DoxyCompactList}\small\item\em Creates a node containing data, and inserting node at index in list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a14fe097dec4b197a64083d0b9f4edc86}{ll\+\_\+append\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a node containing data, and inserting node at end in list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a615e1855c478d14c40ad481c36da077c}{ll\+\_\+push\+\_\+front\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a node containing data, and insert node at front of the list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a7f6e38f24a177ef007a3a71adaa38b7a}{ll\+\_\+insert\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node, int index)
+\begin{DoxyCompactList}\small\item\em Inserts node at index in list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_aa871700b6c55f77ae2c463de873cecad}{ll\+\_\+append\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Inserts node at end in list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a8d3b6fb73e7d06fb3add245dcbbf9848}{ll\+\_\+push\+\_\+front\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Inserts node at the front of the list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a3c566618da1265f3a82acfad419bceda}{ll\+\_\+insert\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$dest\+\_\+list, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$src\+\_\+list, int index)
+\begin{DoxyCompactList}\small\item\em Inserts src\+\_\+list in dest\+\_\+list at index. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_aad47abcb5da491bc8e544acd46fba675}{ll\+\_\+append\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$dest\+\_\+list, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$src\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Append src\+\_\+list to the end dest\+\_\+list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_afaf766875c32d3a533d86ace2a91778f}{ll\+\_\+push\+\_\+front\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$dest\+\_\+list, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$src\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Inserts src\+\_\+list at the front of dest\+\_\+list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_af10605a9e74d0cda6c6f8e1ef933cfcd}{ll\+\_\+sort\+\_\+asc} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int($\ast$cmp)(void $\ast$data1, void $\ast$data2))
+\begin{DoxyCompactList}\small\item\em Sorts list in ascendant order, using cmp as value comparator. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a497e77d485e1f546b7c9b03501185ca0}{ll\+\_\+sort\+\_\+desc} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int($\ast$cmp)(void $\ast$data1, void $\ast$data2))
+\begin{DoxyCompactList}\small\item\em Sorts list in descendant order, using cmp as value comparator. \end{DoxyCompactList}\item 
+void $\ast$$\ast$ \hyperlink{linked__list_8h_aa195f54c2a75fa78983a030e5fcc852c}{ll\+\_\+to\+\_\+array} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Creates an array from values in list. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$ \hyperlink{linked__list_8h_a5e7694870bb64935814a95138dce74e7}{ll\+\_\+from\+\_\+array} (void $\ast$$\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates linked list from array. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{linked__list_8h_a3bd47a8462f45fd120c131f67d015e46}{ll\+\_\+get\+\_\+len} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns length of list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ac75f687ca603c22ac07d2a5ab83f3372}{ll\+\_\+is\+\_\+empty} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true if list is empty (first == N\+U\+LL). \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_adaab3cbe7b794844d27dad60aa008bc9}{ll\+\_\+has\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Returns true if list contains node. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a2c4cdba9559d4df0bfe083094a5a26b5}{ll\+\_\+is\+\_\+correct} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Check if a list is correctly formed. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a892125b5668fe631983fea3fe8bb6e04}{ll\+\_\+print\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int($\ast$print\+\_\+function)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Display data from each node of list using print\+\_\+function. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ad5395a8c19c4002766584c31babcdd20}{ll\+\_\+move\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node, int index)
+\begin{DoxyCompactList}\small\item\em Returns true if node was moved successfully at index. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a88b3921814dbc34944c6e66679eb3995}{ll\+\_\+remove\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Returns true if node was removed successfullyfrom list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a7ae6a0b82552dae6bf2ca94f11c91dc3}{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int index)
+\begin{DoxyCompactList}\small\item\em Returns true if node at index removed successfullyfrom list. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ace6bc2c033b484910d75480a35a7ec68}{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data, bool($\ast$cmp)(void $\ast$, void $\ast$))
+\begin{DoxyCompactList}\small\item\em Returns true if the node containing data was successfully removed. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a624af69d815a7d3a5e1df1cbebaad066}{ll\+\_\+revert} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true list was reversed successfully. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$ \hyperlink{linked__list_8h_af28ad263ae2b34cb990b223b5b7b6468}{ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int index)
+\begin{DoxyCompactList}\small\item\em Returns pointer to node at index. Index can be negative. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{linked__list_8h_aa9e9ea9443a701bb10192d140b79d2a7}{ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int index)
+\begin{DoxyCompactList}\small\item\em Returns pointer to data from node at index. Index can be negative. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{linked__list_8h_aea2b1f234777a9f10bf2af4026b4a711}{ll\+\_\+get\+\_\+node\+\_\+index} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Returns index of node in list. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$ \hyperlink{linked__list_8h_a2093922d1db5ba81284d0a0500beacac}{ll\+\_\+create\+\_\+node} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a node, with data. Prev/\+Next fields are set to N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$ \hyperlink{linked__list_8h_abf517f013985da4a5c6d46c6b148b636}{ll\+\_\+create\+\_\+list} (void)
+\begin{DoxyCompactList}\small\item\em Creates empty list.\textquotesingle{}first\textquotesingle{} field is set to N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$ \hyperlink{linked__list_8h_a3c3fbc4edad6fb4979b2675364ed05c1}{ll\+\_\+one\+\_\+node} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates list with one node, containing data. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ab46c882c740b7cab0e0fec26add1d53e}{ll\+\_\+free\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true if list was successfully destroyed. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_aa6982f1152fb3bf2fa47c88911a6a79f}{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true if list and related data was successfully destroyed. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ab3ec91de34142c4e24c755449c73163b}{ll\+\_\+free\+\_\+node} (\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$$\ast$node)
+\begin{DoxyCompactList}\small\item\em Free a node (the data structure), but not the held data. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_a0dc6d3c764eb75a7e120e6c5021c2cfc}{ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data} (\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$$\ast$node)
+\begin{DoxyCompactList}\small\item\em Free a node (the data structure), A\+ND the held data. \end{DoxyCompactList}\item 
+bool \hyperlink{linked__list_8h_ae319494a2e596e54f2051dc76c767cba}{ll\+\_\+map} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$($\ast$f)(void $\ast$data, int index, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list))
+\begin{DoxyCompactList}\small\item\em Call f on each node of the list. f return the modified data. \end{DoxyCompactList}\item 
+\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$ \hyperlink{linked__list_8h_ad28a93db2eaa6af55ff80ab17605cb98}{ll\+\_\+filter} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, bool($\ast$filter)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Filters nodes and return a new list. The new list contains node on which the filter function returned true. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{linked__list_8h_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}{ll\+\_\+foldl} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$init, void $\ast$($\ast$f)(void $\ast$value, void $\ast$data))
+\begin{DoxyCompactList}\small\item\em takes init and the list\textquotesingle{}s first item and applies f to it, then feeds the function with this result and the second argument and so on \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{linked__list_8h_af91902fcb73240f230ca0c303f052fa4}{ll\+\_\+foldr} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$init, void $\ast$($\ast$f)(void $\ast$value, void $\ast$data))
+\begin{DoxyCompactList}\small\item\em it takes init and list\textquotesingle{}s last item and applies f to it, then it takes the penultimate item from the end and the result, and so on \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{linked__list_8h_afdd503c7602488094b1ece8885d59c8d}\label{linked__list_8h_afdd503c7602488094b1ece8885d59c8d}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!L\+L\+\_\+\+E\+R\+R\+OR@{L\+L\+\_\+\+E\+R\+R\+OR}}
+\index{L\+L\+\_\+\+E\+R\+R\+OR@{L\+L\+\_\+\+E\+R\+R\+OR}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+E\+R\+R\+OR}{LL\_ERROR}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+E\+R\+R\+OR~(-\/1)}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}\label{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!llist\+\_\+t@{llist\+\_\+t}}
+\index{llist\+\_\+t@{llist\+\_\+t}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{llist\+\_\+t}{llist\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structs__linked__list}{s\+\_\+linked\+\_\+list}  \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}}
+
+
+
+Data structure representing a linked-\/list\textquotesingle{}s head. 
+
+\mbox{\Hypertarget{linked__list_8h_a577a4040dbf577456551acc29736ded7}\label{linked__list_8h_a577a4040dbf577456551acc29736ded7}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!node\+\_\+t@{node\+\_\+t}}
+\index{node\+\_\+t@{node\+\_\+t}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{node\+\_\+t}{node\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structs__node}{s\+\_\+node}  \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t}}
+
+
+
+Data structure representing a linked-\/list\textquotesingle{}s node. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{linked__list_8h_a14fe097dec4b197a64083d0b9f4edc86}\label{linked__list_8h_a14fe097dec4b197a64083d0b9f4edc86}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+append\+\_\+data@{ll\+\_\+append\+\_\+data}}
+\index{ll\+\_\+append\+\_\+data@{ll\+\_\+append\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+data()}{ll\_append\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a node containing data, and inserting node at end in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_aad47abcb5da491bc8e544acd46fba675}\label{linked__list_8h_aad47abcb5da491bc8e544acd46fba675}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+append\+\_\+list@{ll\+\_\+append\+\_\+list}}
+\index{ll\+\_\+append\+\_\+list@{ll\+\_\+append\+\_\+list}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+list()}{ll\_append\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{dest\+\_\+list,  }\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{src\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Append src\+\_\+list to the end dest\+\_\+list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_aa871700b6c55f77ae2c463de873cecad}\label{linked__list_8h_aa871700b6c55f77ae2c463de873cecad}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+append\+\_\+node@{ll\+\_\+append\+\_\+node}}
+\index{ll\+\_\+append\+\_\+node@{ll\+\_\+append\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+node()}{ll\_append\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Inserts node at end in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_abf517f013985da4a5c6d46c6b148b636}\label{linked__list_8h_abf517f013985da4a5c6d46c6b148b636}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+create\+\_\+list@{ll\+\_\+create\+\_\+list}}
+\index{ll\+\_\+create\+\_\+list@{ll\+\_\+create\+\_\+list}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+create\+\_\+list()}{ll\_create\_list()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}$\ast$ ll\+\_\+create\+\_\+list (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Creates empty list.\textquotesingle{}first\textquotesingle{} field is set to N\+U\+LL. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to an \char`\"{}empty\char`\"{} list, or N\+U\+LL if an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a2093922d1db5ba81284d0a0500beacac}\label{linked__list_8h_a2093922d1db5ba81284d0a0500beacac}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+create\+\_\+node@{ll\+\_\+create\+\_\+node}}
+\index{ll\+\_\+create\+\_\+node@{ll\+\_\+create\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+create\+\_\+node()}{ll\_create\_node()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t}$\ast$ ll\+\_\+create\+\_\+node (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a node, with data. Prev/\+Next fields are set to N\+U\+LL. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a node, or N\+U\+LL if an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_ad28a93db2eaa6af55ff80ab17605cb98}\label{linked__list_8h_ad28a93db2eaa6af55ff80ab17605cb98}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+filter@{ll\+\_\+filter}}
+\index{ll\+\_\+filter@{ll\+\_\+filter}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+filter()}{ll\_filter()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}$\ast$ ll\+\_\+filter (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{bool($\ast$)(void $\ast$data)}]{filter }\end{DoxyParamCaption})}
+
+
+
+Filters nodes and return a new list. The new list contains node on which the filter function returned true. 
+
+\begin{DoxyWarning}{Warning}
+the held data is no deep-\/copied 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+a newly formed list, null on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}\label{linked__list_8h_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+foldl@{ll\+\_\+foldl}}
+\index{ll\+\_\+foldl@{ll\+\_\+foldl}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+foldl()}{ll\_foldl()}}
+{\footnotesize\ttfamily void$\ast$ ll\+\_\+foldl (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{init,  }\item[{void $\ast$($\ast$)(void $\ast$value, void $\ast$data)}]{f }\end{DoxyParamCaption})}
+
+
+
+takes init and the list\textquotesingle{}s first item and applies f to it, then feeds the function with this result and the second argument and so on 
+
+\mbox{\Hypertarget{linked__list_8h_af91902fcb73240f230ca0c303f052fa4}\label{linked__list_8h_af91902fcb73240f230ca0c303f052fa4}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+foldr@{ll\+\_\+foldr}}
+\index{ll\+\_\+foldr@{ll\+\_\+foldr}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+foldr()}{ll\_foldr()}}
+{\footnotesize\ttfamily void$\ast$ ll\+\_\+foldr (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{init,  }\item[{void $\ast$($\ast$)(void $\ast$value, void $\ast$data)}]{f }\end{DoxyParamCaption})}
+
+
+
+it takes init and list\textquotesingle{}s last item and applies f to it, then it takes the penultimate item from the end and the result, and so on 
+
+\mbox{\Hypertarget{linked__list_8h_ab46c882c740b7cab0e0fec26add1d53e}\label{linked__list_8h_ab46c882c740b7cab0e0fec26add1d53e}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+free\+\_\+list@{ll\+\_\+free\+\_\+list}}
+\index{ll\+\_\+free\+\_\+list@{ll\+\_\+free\+\_\+list}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+list()}{ll\_free\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true if list was successfully destroyed. 
+
+\begin{DoxyWarning}{Warning}
+the head is freed 
+\end{DoxyWarning}
+\mbox{\Hypertarget{linked__list_8h_aa6982f1152fb3bf2fa47c88911a6a79f}\label{linked__list_8h_aa6982f1152fb3bf2fa47c88911a6a79f}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data}}
+\index{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data()}{ll\_free\_list\_and\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true if list and related data was successfully destroyed. 
+
+\begin{DoxyWarning}{Warning}
+the head is freed 
+\end{DoxyWarning}
+\mbox{\Hypertarget{linked__list_8h_ab3ec91de34142c4e24c755449c73163b}\label{linked__list_8h_ab3ec91de34142c4e24c755449c73163b}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+free\+\_\+node@{ll\+\_\+free\+\_\+node}}
+\index{ll\+\_\+free\+\_\+node@{ll\+\_\+free\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+node()}{ll\_free\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$$\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Free a node (the data structure), but not the held data. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a0dc6d3c764eb75a7e120e6c5021c2cfc}\label{linked__list_8h_a0dc6d3c764eb75a7e120e6c5021c2cfc}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data}}
+\index{ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data()}{ll\_free\_node\_and\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+node\+\_\+and\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$$\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Free a node (the data structure), A\+ND the held data. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a5e7694870bb64935814a95138dce74e7}\label{linked__list_8h_a5e7694870bb64935814a95138dce74e7}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+from\+\_\+array@{ll\+\_\+from\+\_\+array}}
+\index{ll\+\_\+from\+\_\+array@{ll\+\_\+from\+\_\+array}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+from\+\_\+array()}{ll\_from\_array()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}$\ast$ ll\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates linked list from array. 
+
+\begin{DoxyNote}{Note}
+The values are not duplicated 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A pointer to a list\textquotesingle{}s head, or N\+U\+LL on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_aa9e9ea9443a701bb10192d140b79d2a7}\label{linked__list_8h_aa9e9ea9443a701bb10192d140b79d2a7}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index@{ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index}}
+\index{ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index@{ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index()}{ll\_get\_data\_by\_index()}}
+{\footnotesize\ttfamily void$\ast$ ll\+\_\+get\+\_\+data\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns pointer to data from node at index. Index can be negative. 
+
+\begin{DoxyReturn}{Returns}
+If an error occurs, N\+U\+LL is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a3bd47a8462f45fd120c131f67d015e46}\label{linked__list_8h_a3bd47a8462f45fd120c131f67d015e46}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+get\+\_\+len@{ll\+\_\+get\+\_\+len}}
+\index{ll\+\_\+get\+\_\+len@{ll\+\_\+get\+\_\+len}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+get\+\_\+len()}{ll\_get\_len()}}
+{\footnotesize\ttfamily size\+\_\+t ll\+\_\+get\+\_\+len (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns length of list. 
+
+\begin{DoxyReturn}{Returns}
+If an error occurs (invalid list, for example), L\+L\+\_\+\+E\+R\+R\+OR is returned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_af28ad263ae2b34cb990b223b5b7b6468}\label{linked__list_8h_af28ad263ae2b34cb990b223b5b7b6468}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index@{ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index}}
+\index{ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index@{ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index()}{ll\_get\_node\_by\_index()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t}$\ast$ ll\+\_\+get\+\_\+node\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns pointer to node at index. Index can be negative. 
+
+\begin{DoxyReturn}{Returns}
+If an error occurs, N\+U\+LL is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_aea2b1f234777a9f10bf2af4026b4a711}\label{linked__list_8h_aea2b1f234777a9f10bf2af4026b4a711}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+get\+\_\+node\+\_\+index@{ll\+\_\+get\+\_\+node\+\_\+index}}
+\index{ll\+\_\+get\+\_\+node\+\_\+index@{ll\+\_\+get\+\_\+node\+\_\+index}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+get\+\_\+node\+\_\+index()}{ll\_get\_node\_index()}}
+{\footnotesize\ttfamily size\+\_\+t ll\+\_\+get\+\_\+node\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Returns index of node in list. 
+
+\begin{DoxyReturn}{Returns}
+If an error occurs, L\+L\+\_\+\+E\+R\+R\+OR is returned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_adaab3cbe7b794844d27dad60aa008bc9}\label{linked__list_8h_adaab3cbe7b794844d27dad60aa008bc9}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+has\+\_\+node@{ll\+\_\+has\+\_\+node}}
+\index{ll\+\_\+has\+\_\+node@{ll\+\_\+has\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+has\+\_\+node()}{ll\_has\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+has\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Returns true if list contains node. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a3678815cc7cd8d8f4c187d545e0f1e25}\label{linked__list_8h_a3678815cc7cd8d8f4c187d545e0f1e25}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+insert\+\_\+data@{ll\+\_\+insert\+\_\+data}}
+\index{ll\+\_\+insert\+\_\+data@{ll\+\_\+insert\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+insert\+\_\+data()}{ll\_insert\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+insert\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Creates a node containing data, and inserting node at index in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a3c566618da1265f3a82acfad419bceda}\label{linked__list_8h_a3c566618da1265f3a82acfad419bceda}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+insert\+\_\+list@{ll\+\_\+insert\+\_\+list}}
+\index{ll\+\_\+insert\+\_\+list@{ll\+\_\+insert\+\_\+list}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+insert\+\_\+list()}{ll\_insert\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+insert\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{dest\+\_\+list,  }\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{src\+\_\+list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Inserts src\+\_\+list in dest\+\_\+list at index. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a7f6e38f24a177ef007a3a71adaa38b7a}\label{linked__list_8h_a7f6e38f24a177ef007a3a71adaa38b7a}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+insert\+\_\+node@{ll\+\_\+insert\+\_\+node}}
+\index{ll\+\_\+insert\+\_\+node@{ll\+\_\+insert\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+insert\+\_\+node()}{ll\_insert\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+insert\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Inserts node at index in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a2c4cdba9559d4df0bfe083094a5a26b5}\label{linked__list_8h_a2c4cdba9559d4df0bfe083094a5a26b5}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+is\+\_\+correct@{ll\+\_\+is\+\_\+correct}}
+\index{ll\+\_\+is\+\_\+correct@{ll\+\_\+is\+\_\+correct}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+is\+\_\+correct()}{ll\_is\_correct()}}
+{\footnotesize\ttfamily bool ll\+\_\+is\+\_\+correct (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Check if a list is correctly formed. 
+
+\mbox{\Hypertarget{linked__list_8h_ac75f687ca603c22ac07d2a5ab83f3372}\label{linked__list_8h_ac75f687ca603c22ac07d2a5ab83f3372}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+is\+\_\+empty@{ll\+\_\+is\+\_\+empty}}
+\index{ll\+\_\+is\+\_\+empty@{ll\+\_\+is\+\_\+empty}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+is\+\_\+empty()}{ll\_is\_empty()}}
+{\footnotesize\ttfamily bool ll\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true if list is empty (first == N\+U\+LL). 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_ae319494a2e596e54f2051dc76c767cba}\label{linked__list_8h_ae319494a2e596e54f2051dc76c767cba}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+map@{ll\+\_\+map}}
+\index{ll\+\_\+map@{ll\+\_\+map}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+map()}{ll\_map()}}
+{\footnotesize\ttfamily bool ll\+\_\+map (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$($\ast$)(void $\ast$data, int index, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)}]{f }\end{DoxyParamCaption})}
+
+
+
+Call f on each node of the list. f return the modified data. 
+
+\begin{DoxyReturn}{Returns}
+a boolean, false on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_ad5395a8c19c4002766584c31babcdd20}\label{linked__list_8h_ad5395a8c19c4002766584c31babcdd20}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+move\+\_\+node@{ll\+\_\+move\+\_\+node}}
+\index{ll\+\_\+move\+\_\+node@{ll\+\_\+move\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+move\+\_\+node()}{ll\_move\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+move\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns true if node was moved successfully at index. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a3c3fbc4edad6fb4979b2675364ed05c1}\label{linked__list_8h_a3c3fbc4edad6fb4979b2675364ed05c1}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+one\+\_\+node@{ll\+\_\+one\+\_\+node}}
+\index{ll\+\_\+one\+\_\+node@{ll\+\_\+one\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+one\+\_\+node()}{ll\_one\_node()}}
+{\footnotesize\ttfamily \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t}$\ast$ ll\+\_\+one\+\_\+node (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates list with one node, containing data. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a list, or N\+U\+LL if an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a892125b5668fe631983fea3fe8bb6e04}\label{linked__list_8h_a892125b5668fe631983fea3fe8bb6e04}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+print\+\_\+data@{ll\+\_\+print\+\_\+data}}
+\index{ll\+\_\+print\+\_\+data@{ll\+\_\+print\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+print\+\_\+data()}{ll\_print\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+print\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int($\ast$)(void $\ast$data)}]{print\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+Display data from each node of list using print\+\_\+function. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a615e1855c478d14c40ad481c36da077c}\label{linked__list_8h_a615e1855c478d14c40ad481c36da077c}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+push\+\_\+front\+\_\+data@{ll\+\_\+push\+\_\+front\+\_\+data}}
+\index{ll\+\_\+push\+\_\+front\+\_\+data@{ll\+\_\+push\+\_\+front\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+data()}{ll\_push\_front\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a node containing data, and insert node at front of the list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_afaf766875c32d3a533d86ace2a91778f}\label{linked__list_8h_afaf766875c32d3a533d86ace2a91778f}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+push\+\_\+front\+\_\+list@{ll\+\_\+push\+\_\+front\+\_\+list}}
+\index{ll\+\_\+push\+\_\+front\+\_\+list@{ll\+\_\+push\+\_\+front\+\_\+list}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+list()}{ll\_push\_front\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{dest\+\_\+list,  }\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{src\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Inserts src\+\_\+list at the front of dest\+\_\+list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a8d3b6fb73e7d06fb3add245dcbbf9848}\label{linked__list_8h_a8d3b6fb73e7d06fb3add245dcbbf9848}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+push\+\_\+front\+\_\+node@{ll\+\_\+push\+\_\+front\+\_\+node}}
+\index{ll\+\_\+push\+\_\+front\+\_\+node@{ll\+\_\+push\+\_\+front\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+node()}{ll\_push\_front\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Inserts node at the front of the list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a88b3921814dbc34944c6e66679eb3995}\label{linked__list_8h_a88b3921814dbc34944c6e66679eb3995}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+remove\+\_\+node@{ll\+\_\+remove\+\_\+node}}
+\index{ll\+\_\+remove\+\_\+node@{ll\+\_\+remove\+\_\+node}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node()}{ll\_remove\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Returns true if node was removed successfullyfrom list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a7ae6a0b82552dae6bf2ca94f11c91dc3}\label{linked__list_8h_a7ae6a0b82552dae6bf2ca94f11c91dc3}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index@{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index}}
+\index{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index@{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index()}{ll\_remove\_node\_at\_index()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns true if node at index removed successfullyfrom list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_ace6bc2c033b484910d75480a35a7ec68}\label{linked__list_8h_ace6bc2c033b484910d75480a35a7ec68}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data@{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data}}
+\index{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data@{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data()}{ll\_remove\_node\_by\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{bool($\ast$)(void $\ast$, void $\ast$)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Returns true if the node containing data was successfully removed. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em cmp} & a function, which returns true if the data are equal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{linked__list_8h_a624af69d815a7d3a5e1df1cbebaad066}\label{linked__list_8h_a624af69d815a7d3a5e1df1cbebaad066}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+revert@{ll\+\_\+revert}}
+\index{ll\+\_\+revert@{ll\+\_\+revert}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+revert()}{ll\_revert()}}
+{\footnotesize\ttfamily bool ll\+\_\+revert (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true list was reversed successfully. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_af10605a9e74d0cda6c6f8e1ef933cfcd}\label{linked__list_8h_af10605a9e74d0cda6c6f8e1ef933cfcd}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+sort\+\_\+asc@{ll\+\_\+sort\+\_\+asc}}
+\index{ll\+\_\+sort\+\_\+asc@{ll\+\_\+sort\+\_\+asc}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+sort\+\_\+asc()}{ll\_sort\_asc()}}
+{\footnotesize\ttfamily bool ll\+\_\+sort\+\_\+asc (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Sorts list in ascendant order, using cmp as value comparator. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_a497e77d485e1f546b7c9b03501185ca0}\label{linked__list_8h_a497e77d485e1f546b7c9b03501185ca0}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+sort\+\_\+desc@{ll\+\_\+sort\+\_\+desc}}
+\index{ll\+\_\+sort\+\_\+desc@{ll\+\_\+sort\+\_\+desc}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+sort\+\_\+desc()}{ll\_sort\_desc()}}
+{\footnotesize\ttfamily bool ll\+\_\+sort\+\_\+desc (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Sorts list in descendant order, using cmp as value comparator. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{linked__list_8h_aa195f54c2a75fa78983a030e5fcc852c}\label{linked__list_8h_aa195f54c2a75fa78983a030e5fcc852c}} 
+\index{linked\+\_\+list.\+h@{linked\+\_\+list.\+h}!ll\+\_\+to\+\_\+array@{ll\+\_\+to\+\_\+array}}
+\index{ll\+\_\+to\+\_\+array@{ll\+\_\+to\+\_\+array}!linked\+\_\+list.\+h@{linked\+\_\+list.\+h}}
+\subsubsection{\texorpdfstring{ll\+\_\+to\+\_\+array()}{ll\_to\_array()}}
+{\footnotesize\ttfamily void$\ast$$\ast$ ll\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Creates an array from values in list. 
+
+\begin{DoxyNote}{Note}
+The values are not duplicated 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+A pointer to a 2D array, or N\+U\+LL on error 
+\end{DoxyReturn}

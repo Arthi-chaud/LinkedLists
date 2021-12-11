@@ -1,0 +1,40 @@
+\hypertarget{ll__free__list_8c}{}\section{sources/ll\+\_\+free\+\_\+list.c File Reference}
+\label{ll__free__list_8c}\index{sources/ll\+\_\+free\+\_\+list.\+c@{sources/ll\+\_\+free\+\_\+list.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ll__free__list_8c_ab46c882c740b7cab0e0fec26add1d53e}{ll\+\_\+free\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true if list was successfully destroyed. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__free__list_8c_aa6982f1152fb3bf2fa47c88911a6a79f}{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Returns true if list and related data was successfully destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__free__list_8c_ab46c882c740b7cab0e0fec26add1d53e}\label{ll__free__list_8c_ab46c882c740b7cab0e0fec26add1d53e}} 
+\index{ll\+\_\+free\+\_\+list.\+c@{ll\+\_\+free\+\_\+list.\+c}!ll\+\_\+free\+\_\+list@{ll\+\_\+free\+\_\+list}}
+\index{ll\+\_\+free\+\_\+list@{ll\+\_\+free\+\_\+list}!ll\+\_\+free\+\_\+list.\+c@{ll\+\_\+free\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+list()}{ll\_free\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true if list was successfully destroyed. 
+
+\begin{DoxyWarning}{Warning}
+the head is freed 
+\end{DoxyWarning}
+\mbox{\Hypertarget{ll__free__list_8c_aa6982f1152fb3bf2fa47c88911a6a79f}\label{ll__free__list_8c_aa6982f1152fb3bf2fa47c88911a6a79f}} 
+\index{ll\+\_\+free\+\_\+list.\+c@{ll\+\_\+free\+\_\+list.\+c}!ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data}}
+\index{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data@{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data}!ll\+\_\+free\+\_\+list.\+c@{ll\+\_\+free\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data()}{ll\_free\_list\_and\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+free\+\_\+list\+\_\+and\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Returns true if list and related data was successfully destroyed. 
+
+\begin{DoxyWarning}{Warning}
+the head is freed 
+\end{DoxyWarning}

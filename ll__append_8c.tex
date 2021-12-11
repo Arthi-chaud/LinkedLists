@@ -1,0 +1,54 @@
+\hypertarget{ll__append_8c}{}\section{sources/ll\+\_\+insert/ll\+\_\+append.c File Reference}
+\label{ll__append_8c}\index{sources/ll\+\_\+insert/ll\+\_\+append.\+c@{sources/ll\+\_\+insert/ll\+\_\+append.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ll__append_8c_aa871700b6c55f77ae2c463de873cecad}{ll\+\_\+append\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Inserts node at end in list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__append_8c_a14fe097dec4b197a64083d0b9f4edc86}{ll\+\_\+append\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a node containing data, and inserting node at end in list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__append_8c_aad47abcb5da491bc8e544acd46fba675}{ll\+\_\+append\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$dest\+\_\+list, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$src\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Append src\+\_\+list to the end dest\+\_\+list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__append_8c_a14fe097dec4b197a64083d0b9f4edc86}\label{ll__append_8c_a14fe097dec4b197a64083d0b9f4edc86}} 
+\index{ll\+\_\+append.\+c@{ll\+\_\+append.\+c}!ll\+\_\+append\+\_\+data@{ll\+\_\+append\+\_\+data}}
+\index{ll\+\_\+append\+\_\+data@{ll\+\_\+append\+\_\+data}!ll\+\_\+append.\+c@{ll\+\_\+append.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+data()}{ll\_append\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a node containing data, and inserting node at end in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__append_8c_aad47abcb5da491bc8e544acd46fba675}\label{ll__append_8c_aad47abcb5da491bc8e544acd46fba675}} 
+\index{ll\+\_\+append.\+c@{ll\+\_\+append.\+c}!ll\+\_\+append\+\_\+list@{ll\+\_\+append\+\_\+list}}
+\index{ll\+\_\+append\+\_\+list@{ll\+\_\+append\+\_\+list}!ll\+\_\+append.\+c@{ll\+\_\+append.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+list()}{ll\_append\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{dest\+\_\+list,  }\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{src\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Append src\+\_\+list to the end dest\+\_\+list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__append_8c_aa871700b6c55f77ae2c463de873cecad}\label{ll__append_8c_aa871700b6c55f77ae2c463de873cecad}} 
+\index{ll\+\_\+append.\+c@{ll\+\_\+append.\+c}!ll\+\_\+append\+\_\+node@{ll\+\_\+append\+\_\+node}}
+\index{ll\+\_\+append\+\_\+node@{ll\+\_\+append\+\_\+node}!ll\+\_\+append.\+c@{ll\+\_\+append.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+append\+\_\+node()}{ll\_append\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+append\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Inserts node at end in list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}

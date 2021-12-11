@@ -1,0 +1,59 @@
+\hypertarget{ll__remove__node_8c}{}\section{sources/ll\+\_\+remove\+\_\+node.c File Reference}
+\label{ll__remove__node_8c}\index{sources/ll\+\_\+remove\+\_\+node.\+c@{sources/ll\+\_\+remove\+\_\+node.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ll__remove__node_8c_a88b3921814dbc34944c6e66679eb3995}{ll\+\_\+remove\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Returns true if node was removed successfullyfrom list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__remove__node_8c_a7ae6a0b82552dae6bf2ca94f11c91dc3}{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, int index)
+\begin{DoxyCompactList}\small\item\em Returns true if node at index removed successfullyfrom list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__remove__node_8c_ace6bc2c033b484910d75480a35a7ec68}{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data, bool($\ast$cmp)(void $\ast$, void $\ast$))
+\begin{DoxyCompactList}\small\item\em Returns true if the node containing data was successfully removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__remove__node_8c_a88b3921814dbc34944c6e66679eb3995}\label{ll__remove__node_8c_a88b3921814dbc34944c6e66679eb3995}} 
+\index{ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}!ll\+\_\+remove\+\_\+node@{ll\+\_\+remove\+\_\+node}}
+\index{ll\+\_\+remove\+\_\+node@{ll\+\_\+remove\+\_\+node}!ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node()}{ll\_remove\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Returns true if node was removed successfullyfrom list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__remove__node_8c_a7ae6a0b82552dae6bf2ca94f11c91dc3}\label{ll__remove__node_8c_a7ae6a0b82552dae6bf2ca94f11c91dc3}} 
+\index{ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}!ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index@{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index}}
+\index{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index@{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index}!ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index()}{ll\_remove\_node\_at\_index()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node\+\_\+at\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns true if node at index removed successfullyfrom list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__remove__node_8c_ace6bc2c033b484910d75480a35a7ec68}\label{ll__remove__node_8c_ace6bc2c033b484910d75480a35a7ec68}} 
+\index{ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}!ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data@{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data}}
+\index{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data@{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data}!ll\+\_\+remove\+\_\+node.\+c@{ll\+\_\+remove\+\_\+node.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data()}{ll\_remove\_node\_by\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+remove\+\_\+node\+\_\+by\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{bool($\ast$)(void $\ast$, void $\ast$)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Returns true if the node containing data was successfully removed. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em cmp} & a function, which returns true if the data are equal \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,54 @@
+\hypertarget{ll__push__front_8c}{}\section{sources/ll\+\_\+insert/ll\+\_\+push\+\_\+front.c File Reference}
+\label{ll__push__front_8c}\index{sources/ll\+\_\+insert/ll\+\_\+push\+\_\+front.\+c@{sources/ll\+\_\+insert/ll\+\_\+push\+\_\+front.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ll__push__front_8c_a8d3b6fb73e7d06fb3add245dcbbf9848}{ll\+\_\+push\+\_\+front\+\_\+node} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, \hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Inserts node at the front of the list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__push__front_8c_a615e1855c478d14c40ad481c36da077c}{ll\+\_\+push\+\_\+front\+\_\+data} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a node containing data, and insert node at front of the list. \end{DoxyCompactList}\item 
+bool \hyperlink{ll__push__front_8c_afaf766875c32d3a533d86ace2a91778f}{ll\+\_\+push\+\_\+front\+\_\+list} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$dest\+\_\+list, \hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$src\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Inserts src\+\_\+list at the front of dest\+\_\+list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__push__front_8c_a615e1855c478d14c40ad481c36da077c}\label{ll__push__front_8c_a615e1855c478d14c40ad481c36da077c}} 
+\index{ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}!ll\+\_\+push\+\_\+front\+\_\+data@{ll\+\_\+push\+\_\+front\+\_\+data}}
+\index{ll\+\_\+push\+\_\+front\+\_\+data@{ll\+\_\+push\+\_\+front\+\_\+data}!ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+data()}{ll\_push\_front\_data()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a node containing data, and insert node at front of the list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__push__front_8c_afaf766875c32d3a533d86ace2a91778f}\label{ll__push__front_8c_afaf766875c32d3a533d86ace2a91778f}} 
+\index{ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}!ll\+\_\+push\+\_\+front\+\_\+list@{ll\+\_\+push\+\_\+front\+\_\+list}}
+\index{ll\+\_\+push\+\_\+front\+\_\+list@{ll\+\_\+push\+\_\+front\+\_\+list}!ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+list()}{ll\_push\_front\_list()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{dest\+\_\+list,  }\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{src\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Inserts src\+\_\+list at the front of dest\+\_\+list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ll__push__front_8c_a8d3b6fb73e7d06fb3add245dcbbf9848}\label{ll__push__front_8c_a8d3b6fb73e7d06fb3add245dcbbf9848}} 
+\index{ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}!ll\+\_\+push\+\_\+front\+\_\+node@{ll\+\_\+push\+\_\+front\+\_\+node}}
+\index{ll\+\_\+push\+\_\+front\+\_\+node@{ll\+\_\+push\+\_\+front\+\_\+node}!ll\+\_\+push\+\_\+front.\+c@{ll\+\_\+push\+\_\+front.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+push\+\_\+front\+\_\+node()}{ll\_push\_front\_node()}}
+{\footnotesize\ttfamily bool ll\+\_\+push\+\_\+front\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{linked__list_8h_a577a4040dbf577456551acc29736ded7}{node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Inserts node at the front of the list. 
+
+\begin{DoxyReturn}{Returns}
+false if an error occurs, or true in success 
+\end{DoxyReturn}

@@ -1,0 +1,33 @@
+\hypertarget{ll__fold_8c}{}\section{sources/ll\+\_\+fold.c File Reference}
+\label{ll__fold_8c}\index{sources/ll\+\_\+fold.\+c@{sources/ll\+\_\+fold.\+c}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{ll__fold_8c_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}{ll\+\_\+foldl} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$init, void $\ast$($\ast$f)(void $\ast$value, void $\ast$data))
+\begin{DoxyCompactList}\small\item\em takes init and the list\textquotesingle{}s first item and applies f to it, then feeds the function with this result and the second argument and so on \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{ll__fold_8c_af91902fcb73240f230ca0c303f052fa4}{ll\+\_\+foldr} (\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$list, void $\ast$init, void $\ast$($\ast$f)(void $\ast$value, void $\ast$data))
+\begin{DoxyCompactList}\small\item\em it takes init and list\textquotesingle{}s last item and applies f to it, then it takes the penultimate item from the end and the result, and so on \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ll__fold_8c_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}\label{ll__fold_8c_a0ef15a16cc64c2fc81fd62ee1b9ccd6b}} 
+\index{ll\+\_\+fold.\+c@{ll\+\_\+fold.\+c}!ll\+\_\+foldl@{ll\+\_\+foldl}}
+\index{ll\+\_\+foldl@{ll\+\_\+foldl}!ll\+\_\+fold.\+c@{ll\+\_\+fold.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+foldl()}{ll\_foldl()}}
+{\footnotesize\ttfamily void$\ast$ ll\+\_\+foldl (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{init,  }\item[{void $\ast$($\ast$)(void $\ast$value, void $\ast$data)}]{f }\end{DoxyParamCaption})}
+
+
+
+takes init and the list\textquotesingle{}s first item and applies f to it, then feeds the function with this result and the second argument and so on 
+
+\mbox{\Hypertarget{ll__fold_8c_af91902fcb73240f230ca0c303f052fa4}\label{ll__fold_8c_af91902fcb73240f230ca0c303f052fa4}} 
+\index{ll\+\_\+fold.\+c@{ll\+\_\+fold.\+c}!ll\+\_\+foldr@{ll\+\_\+foldr}}
+\index{ll\+\_\+foldr@{ll\+\_\+foldr}!ll\+\_\+fold.\+c@{ll\+\_\+fold.\+c}}
+\subsubsection{\texorpdfstring{ll\+\_\+foldr()}{ll\_foldr()}}
+{\footnotesize\ttfamily void$\ast$ ll\+\_\+foldr (\begin{DoxyParamCaption}\item[{\hyperlink{linked__list_8h_a7dd6bbac0c81c674acd9cc810f8e25d5}{llist\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{init,  }\item[{void $\ast$($\ast$)(void $\ast$value, void $\ast$data)}]{f }\end{DoxyParamCaption})}
+
+
+
+it takes init and list\textquotesingle{}s last item and applies f to it, then it takes the penultimate item from the end and the result, and so on 
+
