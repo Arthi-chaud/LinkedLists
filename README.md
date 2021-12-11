@@ -26,6 +26,8 @@ It lets you do the following operations:
 
   - At the end of the list (append)
 
+  - At the front of the list (push_front)
+
   - Through a pre-made node, or not
 
 - **Display** a list's content
@@ -56,6 +58,11 @@ This library was developped in order to **make life easier** to any dev who ofte
 To be more precise, this library was developped while my first and second year at EPITECH (_European Institure of Technology_). During those years, in order to fully comprehend memory principles, we programmed multiple projects using C language.
 
 This library can also serve as a **source of inspiration** for any _EPITECH_ or _42_ student who would like to **code their own C containers**.
+
+____
+### Shout out
+
+Thanks to [Octopus](https://github.com/Octopus773): his [lily library](https://github.com/Octopus773/lily) which greatly inspired the conception of this library
 
 ____
 
