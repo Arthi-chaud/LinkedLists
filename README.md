@@ -36,6 +36,14 @@ It lets you do the following operations:
 
   - The list, its nodes, and the data
 
+- Optimized iteration functions
+
+  - Folding functions (inspired by Haskell's foldl/foldr)
+
+  - Mapping functions (inspired by Javascript's map)
+
+  - Filter function
+
 Go to [full documentation](https://arthi-chaud.github.io/LinkedLists/)
 ___
 
